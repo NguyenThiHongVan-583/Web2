@@ -15,10 +15,8 @@ namespace Web2_p1.Models.Domain
         public string? CoverUrl { get; set; }
         public DateTime DateAdded { get; set; }
 
-        //navigation Properties - One publisher has many books
-        public int PublisherId { get; set; }
+        public int PublisherID { get; set; }
         public Publishers Publisher { get; set; }
-        //navigation Properties - One book has many book_author
         public List<Book_Author> Book_Authors { get; set; }
     }
 }

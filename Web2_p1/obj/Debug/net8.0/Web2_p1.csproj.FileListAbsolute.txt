@@ -140,3 +140,4 @@ C:\Users\Admin\source\repos\Web2_p1\Web2_p1\obj\Debug\net8.0\refint\Web2_p1.dll
 C:\Users\Admin\source\repos\Web2_p1\Web2_p1\obj\Debug\net8.0\Web2_p1.pdb
 C:\Users\Admin\source\repos\Web2_p1\Web2_p1\obj\Debug\net8.0\Web2_p1.genruntimeconfig.cache
 C:\Users\Admin\source\repos\Web2_p1\Web2_p1\obj\Debug\net8.0\ref\Web2_p1.dll
+C:\Users\Admin\source\repos\Web2_p1\Web2_p1\obj\Debug\net8.0\Web2_p1.sourcelink.json
