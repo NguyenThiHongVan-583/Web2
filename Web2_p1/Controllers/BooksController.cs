@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Web2_p1.Data;
 using Web2_p1.Models.Domain;
 using Web2_p1.Models.DTO;
 using Web2_p1.Repositories;
+using Microsoft.Extensions.Logging;
 
 namespace Web2_p1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly AppDbContext _dbContext;
@@ -72,6 +75,7 @@ namespace Web2_p1.Controllers
             var createdBook = _bookRepository.AddBook(addBookRequestDTO);
 
             // 4. Trả về 201 Created cùng location header (chuẩn REST)
+            // Fix: Ensure `createdBook` is a domain model or DTO that contains an `ID` property
             return CreatedAtAction(nameof(GetBookById),
                 new { id = createdBook.ID }, createdBook);
         }

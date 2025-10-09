@@ -29,5 +29,10 @@ namespace Web2_p1.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book_Author> Books_Authors { get; set; }
         public DbSet<Publishers> Publishers { get; set; }
+        public object Book_Authors { get; internal set; }
+        public object Regions { get; internal set; }
+        public DbSet<Image> Images { get; set; }
+
+
     }
 }

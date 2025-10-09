@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Web2_p1.Data;
 using Web2_p1.Models.Domain;
 using Web2_p1.Models.DTO;
 using Web2_p1.Repositories;
+using Microsoft.Extensions.Logging;
 
 namespace Web2_p1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class PublishersController : ControllerBase
     {
         private readonly IPublisherRepository _publisherRepository;

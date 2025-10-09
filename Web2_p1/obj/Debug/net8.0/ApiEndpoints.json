@@ -33,8 +33,8 @@
   },
   {
     "ContainingType": "Web2_p1.Controllers.AuthorsController",
-    "Method": "GetAllAuthor",
-    "RelativePath": "api/Authors/get-all-author",
+    "Method": "GetAllAuthors",
+    "RelativePath": "api/Authors/get-all-authors",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -220,6 +220,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web2_p1.Controllers.ImagesController",
+    "Method": "Download",
+    "RelativePath": "api/Images/download/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_p1.Controllers.ImagesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Images/get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_p1.Controllers.ImagesController",
+    "Method": "Upload",
+    "RelativePath": "api/Images/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FileDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web2_p1.Controllers.PublishersController",
     "Method": "AddPublisher",
     "RelativePath": "api/Publishers/add-publisher",
@@ -324,6 +371,38 @@
       {
         "Name": "publisherNoIdDTO",
         "Type": "Web2_p1.Models.DTO.PublisherNoIdDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Web2_p1.Models.DTO.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserController",
+    "Method": "Register",
+    "RelativePath": "api/User/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Web2_p1.Models.DTO.RegisterRequestDTO",
         "IsRequired": true
       }
     ],

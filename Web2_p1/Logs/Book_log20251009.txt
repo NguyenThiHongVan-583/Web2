@@ -1,0 +1,62 @@
+2025-10-09 07:51:23.565 +07:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-09 07:51:24.335 +07:00 [INF] Now listening on: https://localhost:7297
+2025-10-09 07:51:24.338 +07:00 [INF] Now listening on: http://localhost:5270
+2025-10-09 07:51:24.460 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-09 07:51:24.462 +07:00 [INF] Hosting environment: Development
+2025-10-09 07:51:24.466 +07:00 [INF] Content root path: C:\Users\Admin\source\repos\Web2_p1\Web2_p1
+2025-10-09 07:51:26.892 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/index.html - null null
+2025-10-09 07:51:27.446 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/index.html - 200 null text/html;charset=utf-8 567.3619ms
+2025-10-09 07:51:27.469 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_vs/browserLink - null null
+2025-10-09 07:51:27.470 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-09 07:51:27.652 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 182.125ms
+2025-10-09 07:51:27.708 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_vs/browserLink - 200 null text/javascript; charset=UTF-8 239.101ms
+2025-10-09 07:51:27.824 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - null null
+2025-10-09 07:51:27.913 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.1069ms
+2025-10-09 08:19:37.736 +07:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-09 08:19:37.845 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-09 08:19:37.853 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-09 08:19:37.859 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-09 08:19:37.925 +07:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-09 08:19:37.960 +07:00 [INF] Applying migration '20251009011820_AddImageTable'.
+2025-10-09 08:19:38.152 +07:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] DROP CONSTRAINT [FK_Books_Publishers_PublisherId];
+2025-10-09 08:19:39.606 +07:00 [INF] Executed DbCommand (1,452ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Books].[PublisherId]', N'PublisherID', N'COLUMN';
+2025-10-09 08:19:39.618 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Books].[IX_Books_PublisherId]', N'IX_Books_PublisherID', N'INDEX';
+2025-10-09 08:19:39.649 +07:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Images] (
+    [Id] uniqueidentifier NOT NULL,
+    [FileName] nvarchar(max) NOT NULL,
+    [FileExtension] nvarchar(max) NOT NULL,
+    [FileSizeInBytes] bigint NOT NULL,
+    [FileDescription] nvarchar(max) NOT NULL,
+    [FilePath] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Images] PRIMARY KEY ([Id])
+);
+2025-10-09 08:19:39.714 +07:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Books] ADD CONSTRAINT [FK_Books_Publishers_PublisherID] FOREIGN KEY ([PublisherID]) REFERENCES [Publishers] ([Id]) ON DELETE CASCADE;
+2025-10-09 08:19:39.732 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251009011820_AddImageTable', N'8.0.17');
+2025-10-09 08:21:13.360 +07:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-09 08:21:14.032 +07:00 [INF] Now listening on: https://localhost:7297
+2025-10-09 08:21:14.036 +07:00 [INF] Now listening on: http://localhost:5270
+2025-10-09 08:21:14.207 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-09 08:21:14.211 +07:00 [INF] Hosting environment: Development
+2025-10-09 08:21:14.231 +07:00 [INF] Content root path: C:\Users\Admin\source\repos\Web2_p1\Web2_p1
+2025-10-09 08:21:15.187 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/index.html - null null
+2025-10-09 08:21:18.231 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/index.html - 200 null text/html;charset=utf-8 3064.5816ms
+2025-10-09 08:21:18.262 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-09 08:21:18.262 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_vs/browserLink - null null
+2025-10-09 08:21:18.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 67.2196ms
+2025-10-09 08:21:18.537 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_vs/browserLink - 200 null text/javascript; charset=UTF-8 274.4438ms
+2025-10-09 08:21:18.687 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - null null
+2025-10-09 08:21:18.775 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.52ms
