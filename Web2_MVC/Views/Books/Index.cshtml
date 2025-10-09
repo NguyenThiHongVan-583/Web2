@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Web2_MVC.Models.BookDTO>
+
+<h2>📚 Danh sách sách từ API</h2>
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên sách</th>
+            <th>Tác giả</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.AuthorName</td>
+            </tr>
+        }
+    </tbody>
+</table>
